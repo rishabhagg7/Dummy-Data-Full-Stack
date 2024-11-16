@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.data-container {
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90vw;
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 350px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card .icon-close {
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    cursor: pointer;
+    visibility: hidden;
+    width: 20px;
+    height: 20px;
+    transition: visibility 0.2s, background-color 0.2s;
+}
+
+.card:hover .icon-close {
+    visibility: visible;
+}
+
+.card .icon-close:hover {
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+.card h1 {
+    text-align: center;
+}
+
+.card .employee-information {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card .employee-information img {
+    width: 25px;
+}
+
+.card .employee-information .row-container {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.card .employee-information .row-container span {
+    font-size: 1rem;
+    color: #555;
+}
+
+.btn-container {
+    padding: 20px;
+    display: flex;
+    width: 90vw;
+    gap: 20px;
+}
+
+.btn-container .btn-add-data,
+.btn-dlt-data {
+    padding: 12px 20px;
+    background-color: blueviolet;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-container .btn-add-data:hover,
+.btn-dlt-data:hover {
+    background-color: darkviolet;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn-add-data:active,
+.btn-dlt-data:active {
+    transform: scale(0.98);
+    /* Slightly reduce the size */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Add a shadow effect */
+}
